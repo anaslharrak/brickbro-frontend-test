@@ -12,7 +12,7 @@ export default function MapComponent({position}: MapComponentProps) {
     return (
         <APIProvider apiKey={API_KEY}>
             <Map
-            style={{width: '50vw', height: '80vh'}}
+            style={{width: '40vw', height: '60vh'}}
             defaultCenter={{lat: position.lat, lng: position.lng}}
             defaultZoom={18}
             gestureHandling={'greedy'}
