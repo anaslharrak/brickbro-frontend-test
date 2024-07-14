@@ -4,9 +4,11 @@ import { FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
 import { useContext } from 'react';
 import { AddressContext } from '../context/AddressContext';
+import { usePathname } from 'next/navigation';
 
 export default function SearchButtonAndInput() {
   const router = useRouter();
+  const pathname = usePathname();
   const { setAddress } = useContext(AddressContext);
 
 
@@ -16,9 +18,13 @@ export default function SearchButtonAndInput() {
     const formData = new FormData(e.currentTarget);
     const address = formData.get('address') as string;
     setAddress(address);
+
+    if(pathname !== '/map') {
     router.push('/map');
+    }
   }
 
+  
 
 
   return (
