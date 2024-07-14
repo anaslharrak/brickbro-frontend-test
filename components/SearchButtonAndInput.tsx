@@ -22,23 +22,23 @@ export default function SearchButtonAndInput() {
 
 
   return (
-    <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-      <form onSubmit={handleSubmit} className="flex items-center space-x-2">
-        <div className="relative">
-          <input
-            name="address"
-            className="border-2 border-gray-300 pl-24 pr-2 py-3 rounded focus:outline-none focus:border-blue-500"
-            type="text"
-            placeholder="🔎 Address"
-          />
-        </div>
-        <button
-          type="submit"
-          className="border-2 border-gray-300 bg-gray-100 text-blue-600 py-1 px-4 rounded focus:outline-none hover:bg-gray-200"
-        >
-          Search
-        </button>
-      </form>
-    </div>
+    <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0 w-full">
+    <form onSubmit={handleSubmit} className="flex items-center space-x-2 w-full">
+      <div className="flex-grow">
+        <input
+          name="address"
+          className="w-full border-2 border-gray-300 pr-2 py-3 rounded focus:outline-none focus:border-blue-500 text-center"
+          type="text"
+          placeholder="🔎 Address"
+        />
+      </div>
+      <button
+        type="submit"
+        className="flex-none border-2 border-gray-300 bg-gray-100 text-blue-600 py-2 px-4 rounded focus:outline-none hover:bg-gray-200"
+      >
+        Search
+      </button>
+    </form>
+  </div>
   );
 }
